@@ -116,7 +116,7 @@ window#waybar {
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
-#idle_inhibitor, #tray {
+#idle_inhibitor, #tray, #power-profiles-daemon {
     padding: 0 10px;
     margin: 0 2px;
     border-bottom: 2px solid transparent;
@@ -199,6 +199,16 @@ window#waybar {
     border-bottom-color: @memory-color;
 }
 
+#cpu.warning, #memory.warning {
+    color: @yellow;
+    border-bottom-color: @yellow;
+}
+
+#cpu.critical, #memory.critical {
+    color: @red;
+    border-bottom-color: @red;
+}
+
 #temperature {
     color: @temperature-color;
     border-bottom-color: @temperature-color;
@@ -237,6 +247,11 @@ window#waybar {
 #network.disconnected {
     color: @network-disconnected-color;
     border-bottom-color: @network-disconnected-color;
+}
+
+#power-profiles-daemon {
+    color: @orange;
+    border-bottom-color: @orange;
 }
 
 #pulseaudio {
